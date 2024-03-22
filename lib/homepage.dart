@@ -98,3 +98,180 @@ class _HomepageState extends State<Homepage> {
       }
     }
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.pink[100],
+      appBar: AppBar(
+        backgroundColor: Colors.pink[100],
+        title: Text('Random API User'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: getData, // Call getData() when the button is pressed
+            icon: Icon(Icons.refresh), // Use a refresh icon
+          ),
+        ],
+      ),
+      body: RefreshIndicator(child: ListView(
+        children: [
+          Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  color: Colors.pinkAccent,
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              child: Column(
+                children: [
+                  ClipOval(child: Image.network(data[0]['results'][0]['picture']['large'])),
+                  Text('$name', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),)
+
+                ],
+              )),
+
+          Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  color: Colors.pink[50],
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Country: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                        Text('$country', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Email: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$email', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Username: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$username', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Gender: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$gender', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Phone Number: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$phoneNumber', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Cellphone Number: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$cell', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Date of Birth: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$dob', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Street Number: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$streetNumber', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Street Name: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$streetName', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('City: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$city', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('State: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$state', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Postcode: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$postcode', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Latitude: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$latitude', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Longitude: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$longitude', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Registered Date: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$registeredDate', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Nationality: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$nationality', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                ],
+              )),
+        ],
+      ), onRefresh: getData),
+    );
+  }
+}
