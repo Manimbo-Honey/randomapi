@@ -203,3 +203,75 @@ class _HomepageState extends State<Homepage> {
                       Text('$streetNumber', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                     ],
                   ),
+
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Street Name: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$streetName', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('City: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$city', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('State: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$state', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Postcode: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$postcode', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Latitude: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$latitude', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Longitude: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$longitude', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Registered Date: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$registeredDate', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Nationality: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                      Text('$nationality', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    ],
+                  ),
+                ],
+              )),
+        ],
+      ), onRefresh: getData),
+    );
+  }
+}
